@@ -20,6 +20,10 @@ A process is a program in execution, and an integral part of any modern-day [ope
 
 </br>
 
+In any modern operating system, there can be more than one instance of a program loaded in memory at the same time. For example, more than one user can be executing the same program, with each user having separate copies of the program loaded into memory. With some programs, it is possible to have one copy loaded into memory, while several users have shared access to it so that they can each execute the same program-code. Such a program is called [re-entrant](https://en.wikipedia.org/wiki/Reentrancy_(computing)). At a given instant, the processor can only be executing one instruction from one program, but several processes can be sustained over a period of time by assigning each process to the [processor](https://en.wikipedia.org/wiki/Central_processing_unit) at intervals while the remainder become temporarily inactive. The execution of multiple processes over a period of time, rather than simultaneously, is known as concurrent execution.
+
+A [multiprogramming](https://en.wikipedia.org/wiki/Computer_multitasking#Multiprogramming) or [multitasking](https://en.wikipedia.org/wiki/Computer_multitasking) O.S. is a Operating System that can execute many processes concurrently. Multiprogramming requires that the processor be allocated to each process for a period of time and de-allocated or issued at an appropriate moment. If the processor is de-allocated during the execution of a process, it must be done in a way that the process can restart later as efficiently as possible.
+
 
 
 
