@@ -110,7 +110,9 @@ Process module info generally refers to details about the executable files and d
     * EntryPointAddress: The initial instruction address for the module.
     * FileVersionInfo: Details like the version number, product name, and other metadata embedded in the file. 
 
+</br>
 
+![Process_Module](https://github.com/user-attachments/assets/a8016108-1c41-4fa3-a391-3520deb9101f)
 
-
+</br>
 
