@@ -116,3 +116,4 @@ Process module info generally refers to details about the executable files and d
 
 </br>
 
+In summary, "process module info" typically serves the purpose of inspecting the components and memory layout of an active application or system process.
