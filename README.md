@@ -94,8 +94,8 @@ Process module info generally refers to details about the executable files and d
     * Operating System APIs (Windows, Linux): For system management tools and debuggers to inspect other processes.
     * Details available: Module name, file name (full path), base address (memory location), entry point address, and memory size.
       * API examples:
-      * Windows: Functions like EnumProcessModules, GetModuleInformation, and structures like MODULEINFO and RTL_PROCESS_MODULE_INFORMATION are used to access this data.
-      * C# (.NET): The System.Diagnostics.ProcessModule class provides properties to access this information programmatically, such as ModuleName, FileName, and FileVersionInfo.
+      * Windows: Functions like EnumProcessModules, GetModuleInformation, and structures like ```MODULEINFO``` and ```RTL_PROCESS_MODULE_INFORMATION``` are used to access this data.
+      * C# (.NET): The ```System.Diagnostics.ProcessModule``` class provides properties to access this information programmatically, such as ModuleName, FileName, and FileVersionInfo.
 
 * Programming Language Specifics (Node.js, Java): The term can also refer to environment-specific functionality.
     * Node.js: The built-in process module provides information and control over the current Node.js runtime process, rather than other processes on the system.
