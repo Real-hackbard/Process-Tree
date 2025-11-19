@@ -31,8 +31,12 @@ There are two ways for an OS to regain control of the processor during a program
 
 The stopping of one process and starting (or restarting) of another process is called a [context switch](https://en.wikipedia.org/wiki/Context_switch) or context change. In many modern operating systems, processes can consist of many sub-processes. This introduces the concept of a [thread](https://en.wikipedia.org/wiki/Thread_(computing)). A thread may be viewed as a sub-process; that is, a separate, independent sequence of execution within the code of one process. Threads are becoming increasingly important in the design of distributed and [client–server](https://en.wikipedia.org/wiki/Client%E2%80%93server_model) systems and in software run on [multi-processor](https://en.wikipedia.org/wiki/Parallel_computing) systems.
 
+# Process:
+In [computing](https://en.wikipedia.org/wiki/Computing), a process is the [instance](https://en.wikipedia.org/wiki/Instance_(computer_science)) of a [computer program](https://en.wikipedia.org/wiki/Computer_program) that is being executed by one or many threads. There are many different process models, some of which are light weight, but almost all processes (even entire [virtual machines](https://en.wikipedia.org/wiki/Virtual_machine)) are rooted in an [operating system](https://en.wikipedia.org/wiki/Operating_system) (OS) process which comprises the program code, assigned system resources, physical and logical access permissions, and data structures to initiate, control and coordinate execution activity. Depending on the OS, a process may be made up of multiple threads of execution that execute instructions [concurrently](https://en.wikipedia.org/wiki/Concurrency_(computer_science)).
 
+</br>
 
+![Process_vs _Thread](https://github.com/user-attachments/assets/1a656589-6968-4064-8539-2d41704b9716)
 
-
+</br>
 
