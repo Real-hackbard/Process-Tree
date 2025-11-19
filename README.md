@@ -78,7 +78,7 @@ The [DOS 2.x API](https://en.wikipedia.org/wiki/DOS_API) introduced a new progra
 
 </br>
 
-### PE-Executable Structure Information:
+# PE-Executable Structure Information:
 A PE file consists of several headers and sections that instruct the [dynamic linker](https://en.wikipedia.org/wiki/Dynamic_linker) about on how to map the file into memory. An executable image consists of several different regions, each requiring different [memory protection](https://en.wikipedia.org/wiki/Memory_protection) attributes. To ensure proper alignment, the start of each section must align to a page boundary.[8] For instance, the .text section, which contains program code, is typically mapped as an execute/read-only. Conversely, the .data section, which holds global variables, is mapped as no-execute/read write. However, to conserve space, sections are not aligned on disk in this manner. The dynamic linker maps each section to memory individually and assigns the correct permissions based on the information in the headers.
 
 </br>
