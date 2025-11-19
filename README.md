@@ -76,6 +76,15 @@ Program termination would then be performed by a RETF instruction, which would r
 
 The [DOS 2.x API](https://en.wikipedia.org/wiki/DOS_API) introduced a new program termination function, INT 21h Function 4Ch which does not require saving the PSP segment address at the start of the program, and Microsoft advised against the use of the older DOS 1.x method.
 
+</br>
 
+### PE-Executable Structure Information:
+A PE file consists of several headers and sections that instruct the [dynamic linker](https://en.wikipedia.org/wiki/Dynamic_linker) about on how to map the file into memory. An executable image consists of several different regions, each requiring different [memory protection](https://en.wikipedia.org/wiki/Memory_protection) attributes. To ensure proper alignment, the start of each section must align to a page boundary.[8] For instance, the .text section, which contains program code, is typically mapped as an execute/read-only. Conversely, the .data section, which holds global variables, is mapped as no-execute/read write. However, to conserve space, sections are not aligned on disk in this manner. The dynamic linker maps each section to memory individually and assigns the correct permissions based on the information in the headers.
+
+</br>
+
+![Portable-executable-file-format](https://github.com/user-attachments/assets/bef8044b-47e5-4521-8894-91495132f38a)
+
+</br>
 
 
