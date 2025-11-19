@@ -48,5 +48,32 @@ In general, a computer system process consists of (or is said to own) the follow
 * [Security](https://en.wikipedia.org/wiki/Computer_security) attributes, such as the process owner and the process' set of permissions (allowable operations).
 * [Processor](https://en.wikipedia.org/wiki/Central_processing_unit) state ([context](https://en.wikipedia.org/wiki/Context_(computing))), such as the content of registers and physical memory addressing. The state is typically stored in computer [registers](https://en.wikipedia.org/wiki/Processor_register) when the process is executing, and in memory otherwise.
 
+# Dump DOS Header:
+The file can be identified by the ASCII string "MZ" (hexadecimal: 4D 5A) at the beginning of the file (the "[magic number](https://en.wikipedia.org/wiki/Magic_number_(programming))"). "MZ" are the initials of [Mark Zbikowski](https://en.wikipedia.org/wiki/Mark_Zbikowski), one of the leading developers of [MS-DOS](https://en.wikipedia.org/wiki/MS-DOS).
+
+### Segment handling:
+EXE files normally have separate segments for the code, data, and stack. Program execution begins at address 0 of the code segment, and the stack pointer register is set to whatever value is contained in the header information (thus if the header specifies a 512 byte stack, the stack pointer is set to 200h). It is possible to not use a separate stack segment and simply use the [code segment](https://en.wikipedia.org/wiki/Code_segment) for the stack if desired.
+
+The DS ([data segment](https://en.wikipedia.org/wiki/Data_segment)) register normally contains the same value as the CS (code segment) register and is not loaded with the actual segment address of the data segment when an EXE file is initialized; it is necessary for the programmer to set it themselves, generally done via the following instructions:
+
+```asm
+    MOV AX, @DATA
+    MOV DS, AX
+```
+
+### Termination:
+In the original [DOS 1.x API](https://en.wikipedia.org/wiki/DOS_API), it was also necessary to have the CS register pointing to the segment with the PSP at program termination; this was done via the following instructions:
+
+```asm
+    PUSH DS
+    XOR AX, AX
+    PUSH AX
+```
+
+Program termination would then be performed by a RETF instruction, which would retrieve the original segment address with the PSP from the stack and then jump to address 0, which contained an INT 20h instruction.
+
+The [DOS 2.x API](https://en.wikipedia.org/wiki/DOS_API) introduced a new program termination function, INT 21h Function 4Ch which does not require saving the PSP segment address at the start of the program, and Microsoft advised against the use of the older DOS 1.x method.
+
+
 
 
