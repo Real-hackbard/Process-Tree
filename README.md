@@ -12,7 +12,7 @@
 </br>
 
 
-
+A process is a program in execution, and an integral part of any modern-day [operating system](https://en.wikipedia.org/wiki/Operating_system) (OS). The OS must allocate resources to processes, enable [processes](https://en.wikipedia.org/wiki/Process_(computing)) to share and exchange information, protect the resources of each process from other processes and enable synchronization among processes. To meet these requirements, The OS must maintain a [data structure](https://en.wikipedia.org/wiki/Data_structure) for each process, which describes the state and resource ownership of that process, and which enables the operating system to exert control over each process.
 
 
 
