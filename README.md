@@ -24,6 +24,15 @@ In any modern operating system, there can be more than one instance of a program
 
 A [multiprogramming](https://en.wikipedia.org/wiki/Computer_multitasking#Multiprogramming) or [multitasking](https://en.wikipedia.org/wiki/Computer_multitasking) O.S. is a Operating System that can execute many processes concurrently. Multiprogramming requires that the processor be allocated to each process for a period of time and de-allocated or issued at an appropriate moment. If the processor is de-allocated during the execution of a process, it must be done in a way that the process can restart later as efficiently as possible.
 
+There are two ways for an OS to regain control of the processor during a program's execution in order for the OS to perform de-allocation or allocation:
+
+* The process issues a [system call](https://en.wikipedia.org/wiki/System_call) (sometimes called a software [interrupt](https://en.wikipedia.org/wiki/Interrupt); for example, an I/O request occurs requesting to access a file on a hard disk.
+* A hardware interrupt occurs; for example, a key was pressed on the keyboard, or a timer runs out (used in [preemptive multitasking](https://en.wikipedia.org/wiki/Preemption_(computing))).
+
+The stopping of one process and starting (or restarting) of another process is called a [context switch](https://en.wikipedia.org/wiki/Context_switch) or context change. In many modern operating systems, processes can consist of many sub-processes. This introduces the concept of a [thread](https://en.wikipedia.org/wiki/Thread_(computing)). A thread may be viewed as a sub-process; that is, a separate, independent sequence of execution within the code of one process. Threads are becoming increasingly important in the design of distributed and [client–server](https://en.wikipedia.org/wiki/Client%E2%80%93server_model) systems and in software run on [multi-processor](https://en.wikipedia.org/wiki/Parallel_computing) systems.
+
+
+
 
 
 
