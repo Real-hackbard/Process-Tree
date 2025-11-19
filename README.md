@@ -87,4 +87,30 @@ A PE file consists of several headers and sections that instruct the [dynamic li
 
 </br>
 
+# Process module:
+Process module info generally refers to details about the executable files and dynamic link libraries (DLLs) loaded within a running process. This information can be retrieved using various programming APIs depending on the operating system or programming environment.
+
+* The term "process module info" is often used in the context of:
+    * Operating System APIs (Windows, Linux): For system management tools and debuggers to inspect other processes.
+    * Details available: Module name, file name (full path), base address (memory location), entry point address, and memory size.
+      * API examples:
+      * Windows: Functions like EnumProcessModules, GetModuleInformation, and structures like MODULEINFO and RTL_PROCESS_MODULE_INFORMATION are used to access this data.
+      * C# (.NET): The System.Diagnostics.ProcessModule class provides properties to access this information programmatically, such as ModuleName, FileName, and FileVersionInfo.
+
+* Programming Language Specifics (Node.js, Java): The term can also refer to environment-specific functionality.
+    * Node.js: The built-in process module provides information and control over the current Node.js runtime process, rather than other processes on the system.
+    * Java (JPMS): In Java 9 and later, the module-info.java file defines a module's name, its dependencies (requires), and which packages it makes available (exports).
+* Software Engineering (V-Modell XT): In process modeling, a "process module" defines encapsulated work products, activities, roles, and dependencies, which can be tailored for specific project needs. 
+
+* Key Information Typically Included The specific information returned for a process module includes:
+    * ModuleName: The name of the module (e.g., kernel32.dll, notepad.exe).
+    * FileName: The full path to the executable or DLL file on disk.
+    * BaseAddress: The memory address where the module is loaded in the process's virtual memory space.
+    * ModuleMemorySize / SizeOfImage: The amount of static memory required to load the module's code and data.
+    * EntryPointAddress: The initial instruction address for the module.
+    * FileVersionInfo: Details like the version number, product name, and other metadata embedded in the file. 
+
+
+
+
 
