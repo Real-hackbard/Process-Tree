@@ -44,9 +44,9 @@ In general, a computer system process consists of (or is said to own) the follow
 
 * An image of the executable [machine code](https://en.wikipedia.org/wiki/Machine_code) associated with a program.
 * Memory (typically some region of [virtual memory](https://en.wikipedia.org/wiki/Virtual_memory)); which includes the executable code, process-specific data (input and output), a [call stack](https://en.wikipedia.org/wiki/Call_stack) (to keep track of active [subroutines](https://en.wikipedia.org/wiki/Function_(computer_programming)#Jump_to_subroutine) and/or other events), and a [heap](https://en.wikipedia.org/wiki/Memory_management#HEAP) to hold intermediate computation data generated during run time.
-
-
-
+* Operating system descriptors of resources that are allocated to the process, such as [file descriptors](https://en.wikipedia.org/wiki/File_descriptor) ([Unix](https://en.wikipedia.org/wiki/Unix) terminology) or [handles](https://en.wikipedia.org/wiki/Handle_(computing)) (Windows), and data sources and sinks.
+* [Security](https://en.wikipedia.org/wiki/Computer_security) attributes, such as the process owner and the process' set of permissions (allowable operations).
+* [Processor](https://en.wikipedia.org/wiki/Central_processing_unit) state ([context](https://en.wikipedia.org/wiki/Context_(computing))), such as the content of registers and physical memory addressing. The state is typically stored in computer [registers](https://en.wikipedia.org/wiki/Processor_register) when the process is executing, and in memory otherwise.
 
 
 
