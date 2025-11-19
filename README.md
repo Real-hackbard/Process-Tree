@@ -40,3 +40,13 @@ In [computing](https://en.wikipedia.org/wiki/Computing), a process is the [insta
 
 </br>
 
+In general, a computer system process consists of (or is said to own) the following resources:
+
+* An image of the executable [machine code](https://en.wikipedia.org/wiki/Machine_code) associated with a program.
+
+
+
+
+
+
+
