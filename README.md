@@ -43,7 +43,7 @@ In [computing](https://en.wikipedia.org/wiki/Computing), a process is the [insta
 In general, a computer system process consists of (or is said to own) the following resources:
 
 * An image of the executable [machine code](https://en.wikipedia.org/wiki/Machine_code) associated with a program.
-
+* Memory (typically some region of [virtual memory](https://en.wikipedia.org/wiki/Virtual_memory)); which includes the executable code, process-specific data (input and output), a [call stack](https://en.wikipedia.org/wiki/Call_stack) (to keep track of active [subroutines](https://en.wikipedia.org/wiki/Function_(computer_programming)#Jump_to_subroutine) and/or other events), and a [heap](https://en.wikipedia.org/wiki/Memory_management#HEAP) to hold intermediate computation data generated during run time.
 
 
 
